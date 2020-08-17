@@ -31,7 +31,7 @@ if(${PLATFORM} MATCHES "Web")
   set_target_properties(
       ${PROJECT_NAME}
       PROPERTIES
-          OUTPUT_NAME "test"
+          OUTPUT_NAME "maze"
           SUFFIX ".html"
   )
 
