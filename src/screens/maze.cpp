@@ -199,28 +199,28 @@ void Maze::init(){
 
     m_up.width = App::SCREEN_WIDTH *0.15f;
     m_up.height = m_up.width;
-    m_up.x = 10;
-    m_up.y = App::SCREEN_HEIGHT - (m_up.height)*2 - 10;
+    m_up.x = 10 + m_up.width*0.66f;
+    m_up.y = App::SCREEN_HEIGHT - (m_up.height)*1.66f - 10;
 
     m_down.width = m_up.width;
-    m_down.height = m_up.height;
-    m_down.x = 10;
-    m_down.y = App::SCREEN_HEIGHT - m_up.height*1- 10;
+    m_down.height = m_up.height*0.66;
+    m_down.x = 10+ m_up.width*0.66f;
+    m_down.y = App::SCREEN_HEIGHT - m_up.height*0.66f- 10;
 
-    m_left.width = m_up.width;
-    m_left.height = m_up.height;
-    m_left.x = App::SCREEN_WIDTH - m_up.width*2 - 10;
-    m_left.y = App::SCREEN_HEIGHT - m_up.height*1 - 10;
+    m_left.width = m_up.width*0.66f;
+    m_left.height = m_up.height*1.66f;
+    m_left.x = + 10;
+    m_left.y = App::SCREEN_HEIGHT - m_up.height*1.66f - 10;
 
-    m_right.width = m_up.width;
-    m_right.height = m_up.height;
-    m_right.x =  App::SCREEN_WIDTH - m_up.width - 10;
-    m_right.y = App::SCREEN_HEIGHT - m_up.height*1 - 10;
+    m_right.width = m_up.width*0.55f;
+    m_right.height = m_up.height*1.66f;
+    m_right.x = 10+ m_up.width*1.66f;
+    m_right.y = App::SCREEN_HEIGHT - m_up.height*1.66f - 10;
 
     m_shift.width = m_up.width *2;
     m_shift.height = m_up.height;
     m_shift.x = App::SCREEN_WIDTH - 10 - m_shift.width;
-    m_shift.y = App::SCREEN_HEIGHT - 10 - m_shift.height*2;
+    m_shift.y = App::SCREEN_HEIGHT - 10 - m_shift.height;
 
     m_resume.width = App::SCREEN_WIDTH / 3;
     m_resume.height = App::SCREEN_HEIGHT / 5;

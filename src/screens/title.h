@@ -13,7 +13,7 @@ public:
 
 private:
     void setSelect(int s);
-
+    void drawMarker(int s,int y, int h);
     static constexpr const int vSplit = 12;
 
     Rectangle m_start;
