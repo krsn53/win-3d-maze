@@ -431,23 +431,21 @@ Screen* Maze::update(){
 
             int pn = GetTouchPointsCount();
             for(int i=0; i< pn;i++){
-                if(ges == GESTURE_HOLD || ges == GESTURE_DRAG){
-                    Vector2 point = GetTouchPosition(i);
-                    if(CheckCollisionPointRec(point, m_up)){
-                        m_pushUp = true;
-                    }
-                    if(CheckCollisionPointRec(point, m_down)){
-                        m_pushDown = true;
-                    }
-                    if(CheckCollisionPointRec(point, m_left)){
-                         m_pushLeft = true;
-                    }
-                    if(CheckCollisionPointRec(point, m_right)){
-                        m_pushRight = true;
-                    }
-                    if(CheckCollisionPointRec(point, m_shift)){
-                        m_pushShift = true;
-                    }
+                Vector2 point = GetTouchPosition(i);
+                if(CheckCollisionPointRec(point, m_up)){
+                    m_pushUp = true;
+                }
+                if(CheckCollisionPointRec(point, m_down)){
+                    m_pushDown = true;
+                }
+                if(CheckCollisionPointRec(point, m_left)){
+                     m_pushLeft = true;
+                }
+                if(CheckCollisionPointRec(point, m_right)){
+                    m_pushRight = true;
+                }
+                if(CheckCollisionPointRec(point, m_shift)){
+                    m_pushShift = true;
                 }
             }
 
