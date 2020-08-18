@@ -13,7 +13,7 @@ App::App() :
 {
     m_config.playMode= AUTO_MODE;
     m_config.ratsNum = 1;
-    m_config.mapSize= 15;
+    m_config.mapSize= 10;
     m_config.ratsSpeed = m_config.playerSpeed = 0.02f;
     m_config.miniMapSize= App::SCREEN_WIDTH/15;
     m_config.show2DMaze = false;
