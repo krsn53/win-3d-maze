@@ -14,9 +14,8 @@ public:
 private:
     void setSelect(int s);
     void drawMarker(int s,int y, int h);
-    static constexpr const int vSplit = 12;
+    static constexpr const int vSplit = 13;
 
-    Rectangle m_start;
     float m_tmp;
     int m_select;
     int m_keyTime;

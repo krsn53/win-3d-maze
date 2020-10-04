@@ -1,0 +1,1190 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						33
+					]
+				},
+				{
+					"build" : "raylib",
+					"childIndexes" : 
+					[
+						2,
+						5
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "raylib"
+				},
+				{
+					"build" : "raylib/src",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "raylib/src",
+					"targetIndexes" : 
+					[
+						51
+					]
+				},
+				{
+					"build" : "raylib/src/external/glfw",
+					"childIndexes" : 
+					[
+						4
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "raylib/src/external/glfw"
+				},
+				{
+					"build" : "raylib/src/external/glfw/src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "raylib/src/external/glfw/src",
+					"targetIndexes" : 
+					[
+						31,
+						32
+					]
+				},
+				{
+					"build" : "raylib/examples",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "raylib/examples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "maze",
+					"targetIndexes" : 
+					[
+						33
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "raylib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						51
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "GLFW",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						31,
+						32
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "examples",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 5,
+					"id" : "audio_module_playing::@bee7975a7b9058347d73",
+					"jsonFile" : "target-audio_module_playing-Debug-f89b0438bb7e3c7cb1a6.json",
+					"name" : "audio_module_playing",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "audio_multichannel_sound::@bee7975a7b9058347d73",
+					"jsonFile" : "target-audio_multichannel_sound-Debug-a42a77f7c465aeac1822.json",
+					"name" : "audio_multichannel_sound",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "audio_music_stream::@bee7975a7b9058347d73",
+					"jsonFile" : "target-audio_music_stream-Debug-ad04c0bb0794c25302ee.json",
+					"name" : "audio_music_stream",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "audio_raw_stream::@bee7975a7b9058347d73",
+					"jsonFile" : "target-audio_raw_stream-Debug-7dc5b9e7e377f30a8a03.json",
+					"name" : "audio_raw_stream",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "audio_sound_loading::@bee7975a7b9058347d73",
+					"jsonFile" : "target-audio_sound_loading-Debug-727d538bf81cdfb6da3d.json",
+					"name" : "audio_sound_loading",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_2d_camera::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_2d_camera-Debug-4a3c093174d0c87c9284.json",
+					"name" : "core_2d_camera",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_2d_camera_platformer::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_2d_camera_platformer-Debug-a9a3ac110bb9ce970f5e.json",
+					"name" : "core_2d_camera_platformer",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_3d_camera_first_person::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_3d_camera_first_person-Debug-898e55fa8f946c2dde03.json",
+					"name" : "core_3d_camera_first_person",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_3d_camera_free::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_3d_camera_free-Debug-b5779e4f0bc24238c816.json",
+					"name" : "core_3d_camera_free",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_3d_camera_mode::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_3d_camera_mode-Debug-bf55da6557bc43fe256a.json",
+					"name" : "core_3d_camera_mode",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_3d_picking::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_3d_picking-Debug-45a39fbca47fc1fdafb3.json",
+					"name" : "core_3d_picking",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_basic_window::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_basic_window-Debug-6377c1cc348b4f497775.json",
+					"name" : "core_basic_window",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_basic_window_web::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_basic_window_web-Debug-0b4ebf1f8a8c3f634811.json",
+					"name" : "core_basic_window_web",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_custom_logging::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_custom_logging-Debug-228a358dd2380d720b03.json",
+					"name" : "core_custom_logging",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_drop_files::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_drop_files-Debug-5b9a083a746ffa3fd035.json",
+					"name" : "core_drop_files",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_input_gamepad::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_input_gamepad-Debug-17d763f8c2e20b6f1385.json",
+					"name" : "core_input_gamepad",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_input_gestures::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_input_gestures-Debug-781152ec1b5804870750.json",
+					"name" : "core_input_gestures",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_input_keys::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_input_keys-Debug-f703153ea80203998303.json",
+					"name" : "core_input_keys",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_input_mouse::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_input_mouse-Debug-100d11ba3ca51ee9a45d.json",
+					"name" : "core_input_mouse",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_input_mouse_wheel::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_input_mouse_wheel-Debug-603c0e2680d1353472b9.json",
+					"name" : "core_input_mouse_wheel",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_input_multitouch::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_input_multitouch-Debug-2b756d44d9cf53828dab.json",
+					"name" : "core_input_multitouch",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_loading_thread::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_loading_thread-Debug-0fcaf71f18474d191c03.json",
+					"name" : "core_loading_thread",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_quat_conversion::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_quat_conversion-Debug-c8e1c3d9c3558e13d3af.json",
+					"name" : "core_quat_conversion",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_random_values::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_random_values-Debug-459cd3774c39b784b199.json",
+					"name" : "core_random_values",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_scissor_test::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_scissor_test-Debug-92af8c5dbcc166611a54.json",
+					"name" : "core_scissor_test",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_storage_values::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_storage_values-Debug-52ccfa3007f9c45571bd.json",
+					"name" : "core_storage_values",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_vr_simulator::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_vr_simulator-Debug-c19a1003381c7e2651e9.json",
+					"name" : "core_vr_simulator",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_window_letterbox::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_window_letterbox-Debug-9a53475aef8f212389e5.json",
+					"name" : "core_window_letterbox",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "core_world_screen::@bee7975a7b9058347d73",
+					"jsonFile" : "target-core_world_screen-Debug-e8431e88889b8e9a27a8.json",
+					"name" : "core_world_screen",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "easings_testbed::@bee7975a7b9058347d73",
+					"jsonFile" : "target-easings_testbed-Debug-3a3d88846b6f8a173dae.json",
+					"name" : "easings_testbed",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "embedded_files_loading::@bee7975a7b9058347d73",
+					"jsonFile" : "target-embedded_files_loading-Debug-f0d73ba1124de42481a5.json",
+					"name" : "embedded_files_loading",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "glfw::@c35f4a4d62f6cffb7150",
+					"jsonFile" : "target-glfw-Debug-ebd469cf5ba5bf9171e7.json",
+					"name" : "glfw",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "glfw_objlib::@c35f4a4d62f6cffb7150",
+					"jsonFile" : "target-glfw_objlib-Debug-07c5943ef6790b0be51c.json",
+					"name" : "glfw_objlib",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze-Debug-b3751994af9a666fa9cd.json",
+					"name" : "maze",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_animation::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_animation-Debug-70c289b3a1da12ae3b90.json",
+					"name" : "models_animation",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_billboard::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_billboard-Debug-26f23a15b682ac4ec72a.json",
+					"name" : "models_billboard",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_box_collisions::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_box_collisions-Debug-dd7890aa66ab0dc2844a.json",
+					"name" : "models_box_collisions",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_cubicmap::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_cubicmap-Debug-b0f5ca40f47a0e48e387.json",
+					"name" : "models_cubicmap",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_first_person_maze::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_first_person_maze-Debug-4c0efc15ae827cd49c91.json",
+					"name" : "models_first_person_maze",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_geometric_shapes::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_geometric_shapes-Debug-2368aee386fd3c57d22f.json",
+					"name" : "models_geometric_shapes",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_heightmap::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_heightmap-Debug-04b9b7982d94b875bc69.json",
+					"name" : "models_heightmap",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_loading::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_loading-Debug-08e73092c98362a6863a.json",
+					"name" : "models_loading",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_material_pbr::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_material_pbr-Debug-658985d68f683e209076.json",
+					"name" : "models_material_pbr",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_mesh_generation::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_mesh_generation-Debug-206eac1b8097613bfa2c.json",
+					"name" : "models_mesh_generation",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_mesh_picking::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_mesh_picking-Debug-9656b4cc3acc797c8a0f.json",
+					"name" : "models_mesh_picking",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_orthographic_projection::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_orthographic_projection-Debug-f39baff19acee828af19.json",
+					"name" : "models_orthographic_projection",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_rlgl_solar_system::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_rlgl_solar_system-Debug-1dc4f9f21057fafa41fe.json",
+					"name" : "models_rlgl_solar_system",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_skybox::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_skybox-Debug-59cde38f947789511605.json",
+					"name" : "models_skybox",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_waving_cubes::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_waving_cubes-Debug-04d4ed77c2d7aebe4336.json",
+					"name" : "models_waving_cubes",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "models_yaw_pitch_roll::@bee7975a7b9058347d73",
+					"jsonFile" : "target-models_yaw_pitch_roll-Debug-782aa7e9879332606a31.json",
+					"name" : "models_yaw_pitch_roll",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "raudio_standalone::@bee7975a7b9058347d73",
+					"jsonFile" : "target-raudio_standalone-Debug-c5eaef533f2a078ecd71.json",
+					"name" : "raudio_standalone",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "raylib_static::@6c7e8f820bad413119c5",
+					"jsonFile" : "target-raylib_static-Debug-3f47d3552c491b2f82e5.json",
+					"name" : "raylib_static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "rlgl_standalone::@bee7975a7b9058347d73",
+					"jsonFile" : "target-rlgl_standalone-Debug-254ad4b8edb4c9ae6714.json",
+					"name" : "rlgl_standalone",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_basic_lighting::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_basic_lighting-Debug-687d143517e5d0a753f5.json",
+					"name" : "shaders_basic_lighting",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_custom_uniform::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_custom_uniform-Debug-eeafc154b51dde294ae3.json",
+					"name" : "shaders_custom_uniform",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_eratosthenes::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_eratosthenes-Debug-791b218dd6197bda832d.json",
+					"name" : "shaders_eratosthenes",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_fog::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_fog-Debug-c94bb30102d691943698.json",
+					"name" : "shaders_fog",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_hot_reloading::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_hot_reloading-Debug-bf8d0280f80c3ca9a9e4.json",
+					"name" : "shaders_hot_reloading",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_julia_set::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_julia_set-Debug-a633679adcb5d55279d8.json",
+					"name" : "shaders_julia_set",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_model_shader::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_model_shader-Debug-436d831af27728debea2.json",
+					"name" : "shaders_model_shader",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_palette_switch::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_palette_switch-Debug-bc95715c55b956967711.json",
+					"name" : "shaders_palette_switch",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_postprocessing::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_postprocessing-Debug-8ca8720dc9027b0e1398.json",
+					"name" : "shaders_postprocessing",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_raymarching::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_raymarching-Debug-d8a1441dc6d56de24dd6.json",
+					"name" : "shaders_raymarching",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_rlgl_mesh_instanced::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_rlgl_mesh_instanced-Debug-85013f85096cf56462c3.json",
+					"name" : "shaders_rlgl_mesh_instanced",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_shapes_textures::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_shapes_textures-Debug-f96f2bcebd87dbca0e78.json",
+					"name" : "shaders_shapes_textures",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_simple_mask::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_simple_mask-Debug-47a5cce66203a946940a.json",
+					"name" : "shaders_simple_mask",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_spotlight::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_spotlight-Debug-467a4d1616f36a0f9ead.json",
+					"name" : "shaders_spotlight",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_texture_drawing::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_texture_drawing-Debug-f71c7a379e1bf4e71508.json",
+					"name" : "shaders_texture_drawing",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shaders_texture_waves::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shaders_texture_waves-Debug-0825718bb00dc57b7ce7.json",
+					"name" : "shaders_texture_waves",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_basic_shapes::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_basic_shapes-Debug-9990e8e3d54a178682c1.json",
+					"name" : "shapes_basic_shapes",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_bouncing_ball::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_bouncing_ball-Debug-eee1cc9fc97b0b1e52ff.json",
+					"name" : "shapes_bouncing_ball",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_collision_area::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_collision_area-Debug-be5de4fb56e1c3e4ce62.json",
+					"name" : "shapes_collision_area",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_colors_palette::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_colors_palette-Debug-13577748cb89ec068467.json",
+					"name" : "shapes_colors_palette",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_draw_circle_sector::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_draw_circle_sector-Debug-479b447c0af6b45e3338.json",
+					"name" : "shapes_draw_circle_sector",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_draw_rectangle_rounded::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_draw_rectangle_rounded-Debug-75340dcd018ed7c537f6.json",
+					"name" : "shapes_draw_rectangle_rounded",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_draw_ring::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_draw_ring-Debug-3a3761230acdb898055d.json",
+					"name" : "shapes_draw_ring",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_easings_ball_anim::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_easings_ball_anim-Debug-85e2baef508f8305535a.json",
+					"name" : "shapes_easings_ball_anim",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_easings_box_anim::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_easings_box_anim-Debug-d596386bc6de9a9bf413.json",
+					"name" : "shapes_easings_box_anim",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_easings_rectangle_array::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_easings_rectangle_array-Debug-3ed9539cacec503aa7c9.json",
+					"name" : "shapes_easings_rectangle_array",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_following_eyes::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_following_eyes-Debug-9c2afc0e5943dec9c424.json",
+					"name" : "shapes_following_eyes",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_lines_bezier::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_lines_bezier-Debug-b4a56fa8e8c168503258.json",
+					"name" : "shapes_lines_bezier",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_logo_raylib::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_logo_raylib-Debug-e966c4c9b12cb6cd7270.json",
+					"name" : "shapes_logo_raylib",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_logo_raylib_anim::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_logo_raylib_anim-Debug-4bdaaa6b57f56350770b.json",
+					"name" : "shapes_logo_raylib_anim",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "shapes_rectangle_scaling::@bee7975a7b9058347d73",
+					"jsonFile" : "target-shapes_rectangle_scaling-Debug-2119bb3dde730ba184b0.json",
+					"name" : "shapes_rectangle_scaling",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_font_filters::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_font_filters-Debug-d8ec8c7190dc17bea352.json",
+					"name" : "text_font_filters",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_font_loading::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_font_loading-Debug-5f97e60ca55e8ab997a1.json",
+					"name" : "text_font_loading",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_font_sdf::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_font_sdf-Debug-9bde2d30a6d1da120cb6.json",
+					"name" : "text_font_sdf",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_font_spritefont::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_font_spritefont-Debug-14a9b1c32390766afd10.json",
+					"name" : "text_font_spritefont",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_format_text::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_format_text-Debug-5ca0213f5d90d3cc2bad.json",
+					"name" : "text_format_text",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_input_box::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_input_box-Debug-a29a74659df1ae16263b.json",
+					"name" : "text_input_box",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_raylib_fonts::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_raylib_fonts-Debug-433e68fc36c672e8f642.json",
+					"name" : "text_raylib_fonts",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_rectangle_bounds::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_rectangle_bounds-Debug-9000042be25600fab867.json",
+					"name" : "text_rectangle_bounds",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_unicode::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_unicode-Debug-e79ad138d2220865c1d1.json",
+					"name" : "text_unicode",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "text_writing_anim::@bee7975a7b9058347d73",
+					"jsonFile" : "target-text_writing_anim-Debug-071be5fea14d8b2769b4.json",
+					"name" : "text_writing_anim",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_background_scrolling::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_background_scrolling-Debug-00b85622e91d89970318.json",
+					"name" : "textures_background_scrolling",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_blend_modes::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_blend_modes-Debug-82472b5ba4acd38dfbe4.json",
+					"name" : "textures_blend_modes",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_bunnymark::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_bunnymark-Debug-f75ed80a8bf0369ae170.json",
+					"name" : "textures_bunnymark",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_draw_tiled::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_draw_tiled-Debug-8869ab532fe937d8c7fb.json",
+					"name" : "textures_draw_tiled",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_image_drawing::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_image_drawing-Debug-015fdafd434112bb3d4d.json",
+					"name" : "textures_image_drawing",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_image_generation::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_image_generation-Debug-ec6f18dccdeea586968f.json",
+					"name" : "textures_image_generation",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_image_loading::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_image_loading-Debug-4a7ca7f9aa670a84ede3.json",
+					"name" : "textures_image_loading",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_image_processing::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_image_processing-Debug-05f2aca3540dcbf6eae7.json",
+					"name" : "textures_image_processing",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_image_text::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_image_text-Debug-6747181b5f629b7bf9b9.json",
+					"name" : "textures_image_text",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_logo_raylib::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_logo_raylib-Debug-0cfbfb7c46974672cf51.json",
+					"name" : "textures_logo_raylib",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_mouse_painting::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_mouse_painting-Debug-a775d63fa704febfba12.json",
+					"name" : "textures_mouse_painting",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_npatch_drawing::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_npatch_drawing-Debug-cf6772143b233a451da8.json",
+					"name" : "textures_npatch_drawing",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_particles_blending::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_particles_blending-Debug-bf0028c49412bc7a340d.json",
+					"name" : "textures_particles_blending",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_raw_data::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_raw_data-Debug-73488551e7e227db0b2a.json",
+					"name" : "textures_raw_data",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_rectangle::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_rectangle-Debug-df947e7b5529a1dad591.json",
+					"name" : "textures_rectangle",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_sprite_button::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_sprite_button-Debug-95588a77741ad82ff1c8.json",
+					"name" : "textures_sprite_button",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_sprite_explosion::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_sprite_explosion-Debug-e3ce3b83357e31f8d3c2.json",
+					"name" : "textures_sprite_explosion",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_srcrec_dstrec::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_srcrec_dstrec-Debug-e744950986eddd579537.json",
+					"name" : "textures_srcrec_dstrec",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "textures_to_image::@bee7975a7b9058347d73",
+					"jsonFile" : "target-textures_to_image-Debug-a09a46c7a7d4614e6281.json",
+					"name" : "textures_to_image",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/krsn53/programming/c/raylib/win-3d-maze",
+		"source" : "/home/krsn53/programming/c/raylib/win-3d-maze"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

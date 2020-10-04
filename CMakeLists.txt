@@ -7,17 +7,16 @@ project(maze)
 # Grab the screens
 file(GLOB_RECURSE screen_sources src/*.cpp src/*.h)
 
-
 # Executable & linking
 add_executable(${PROJECT_NAME} src/main.cpp ${screen_sources})
 add_subdirectory(raylib)
 
 if(${PLATFORM} MATCHES "Web")
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Os -s USE_GLFW=3 -s ASSERTIONS=1 -s WASM=1")
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --shell-file ${CMAKE_SOURCE_DIR}/src/shell.html --preload-file ${CMAKE_SOURCE_DIR}/mygames/maze/res@/res")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --shell-file ${CMAKE_SOURCE_DIR}/src/shell.html --preload-file ${CMAKE_SOURCE_DIR}/res@/res")
 
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Os -s USE_GLFW=3 -s ASSERTIONS=1 -s WASM=1")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --shell-file ${CMAKE_SOURCE_DIR}/src/shell.html --preload-file ${CMAKE_SOURCE_DIR}/mygames/maze/res@/res")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --shell-file ${CMAKE_SOURCE_DIR}/src/shell.html --preload-file ${CMAKE_SOURCE_DIR}/res@/res")
 
   set(OUTPUT_EXT ".html")
 
@@ -35,6 +34,4 @@ if(${PLATFORM} MATCHES "Web")
 
 endif()
 
-
 target_link_libraries(${PROJECT_NAME} raylib glfw)
-target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_11)

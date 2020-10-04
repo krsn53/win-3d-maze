@@ -8,11 +8,7 @@ Title::Title()
 }
 
 void Title::init(){
-    m_start.width = App::SCREEN_WIDTH / 3;
-    m_start.height = App::SCREEN_HEIGHT /6;
-    m_start.x = App::SCREEN_WIDTH*19/20 - m_start.width;
-    m_start.y = App::SCREEN_HEIGHT*4/5;
-
+    m_tmp = 0;
     m_select = 0;
 }
 
@@ -91,86 +87,22 @@ Screen* Title::update(){
     }
 
     int h, w, s=0;
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    y+=h;
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    y+=h;
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    y+=h;
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    y+=h;
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    y+=h;
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    y+=h;
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    y+=h;
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    y+=h;
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    y+=h;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-    w=m_select == s ? width*2 : width;
-    h=m_select == s++ ? height*2 : height;
-    if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
-        setSelect(s-1);
-    }
-
-
-    if(!CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h}) && CheckCollisionPointRec(GetTouchPosition(0),m_start)){
-        if(ges == GESTURE_TAP){
-            return new Maze();
+    for(int i=0; i<11; i++){
+        w=m_select == s ? width*2 : width;
+        h=m_select == s++ ? height*2 : height;
+        if(CheckCollisionPointRec(GetTouchPosition(0), Rectangle{(float)x,(float)y, (float)w, (float)h})){
+            setSelect(s-1);
         }
-        m_select = 10;
+        y+=h;
 
     }
-
-
 
     int point = GetTouchX();
-    if(point < App::SCREEN_WIDTH /3 && ges == GESTURE_TAP ) {
+    if(point < h*4 && (ges & GESTURE_TAP) == GESTURE_TAP ) {
         m_tmp --;
     }
 
-    if(point > 2*App::SCREEN_WIDTH /3 && ges == GESTURE_TAP) {
+    if(point > App::SCREEN_WIDTH - h*4 && (ges & GESTURE_TAP) == GESTURE_TAP) {
         m_tmp ++;
     }
 
@@ -195,6 +127,10 @@ Screen* Title::update(){
         if(m_keyTime > 30 && (m_keyTime % 6) == 0)m_tmp++;
     }
 
+
+    if(m_select == 10 && ( (ges & GESTURE_TAP) == GESTURE_TAP ||IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_SPACE))){
+        return new Maze();
+    }
 
     switch (m_select) {
     case 0:
@@ -264,18 +200,16 @@ Screen* Title::update(){
 
 void Title::drawMarker(int s, int y, int h){
     if(m_select == s) {
-        DrawRectangle(0, y, App::SCREEN_WIDTH, h*2, GRAY);
-        DrawRectangle(0, y, App::SCREEN_WIDTH/3, h*2, Color{130,130, 200, 255});
-        DrawRectangle(App::SCREEN_WIDTH*2/3, y, App::SCREEN_WIDTH/3, h*2, Color{200,130, 130, 255});
+        DrawRectangle( 0, y, App::SCREEN_WIDTH, h*2, GRAY);
+        DrawRectangle( 0, y, h*4, h*2, DARKGRAY);
+        DrawText("<", h*1.5, y, h*2, WHITE);
+        DrawRectangle( App::SCREEN_WIDTH- h*4, y, h*4, h*2, DARKGRAY);
+        DrawText(">",  App::SCREEN_WIDTH- h*2.5, y, h*2, WHITE);
     }
 }
 
 void Title::draw(){
     ClearBackground(BLACK);
-
-    if(m_select == 10)DrawRectangleRec(m_start, GRAY);
-    DrawRectangleLinesEx(m_start, 5, WHITE);
-    DrawText("Start", m_start.x + m_start.width *0.1f, m_start.y + m_start.height* 0.2f, m_start.height *0.6, WHITE);
 
     int x = App::SCREEN_WIDTH/40;
     int y = App::SCREEN_HEIGHT/40;
@@ -287,37 +221,37 @@ void Title::draw(){
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("Play Mode : %s", strs[m_app->config().playMode]),x, y, h, WHITE);
+    DrawText(FormatText("Play Mode : %s", strs[m_app->config().playMode]), height != h ? x+App::SCREEN_WIDTH/4 : x, y,height, WHITE);
     y+=h;
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("Map Size : %d", m_app->config().mapSize), x,y, h ,WHITE);
+    DrawText(FormatText("Map Size : %d", m_app->config().mapSize), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("Player Speed: %d", (int)(m_app->config().playerSpeed*500)), x,y, h ,WHITE);
+    DrawText(FormatText("Player Speed: %d", (int)(m_app->config().playerSpeed*500)), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("Num Rats : %d", m_app->config().ratsNum), x,y, h ,WHITE);
+    DrawText(FormatText("Num Rats : %d", m_app->config().ratsNum), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("Rats Speed : %d", (int)(m_app->config().ratsSpeed*500)), x,y, h ,WHITE);
+    DrawText(FormatText("Rats Speed : %d", (int)(m_app->config().ratsSpeed*500)), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("Hedron Freq : %.0f %%", (100.0f / m_app->config().hedronRate)), x,y, h ,WHITE);
+    DrawText(FormatText("Hedron Freq : %.0f %%", (100.0f / m_app->config().hedronRate)), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("OpenGL Freq : %.0f %%", (100.0f / m_app->config().glRate)), x,y, h ,WHITE);
+    DrawText(FormatText("OpenGL Freq : %.0f %%", (100.0f / m_app->config().glRate)), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
 
     const char* strs2[]= {"Off", "On"};
@@ -325,15 +259,22 @@ void Title::draw(){
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("Show 2D Maze : %s", strs2[m_app->config().show2DMaze ? 1:0]), x,y, h ,WHITE);
+    DrawText(FormatText("Show 2D Maze : %s", strs2[m_app->config().show2DMaze ? 1:0]), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("2D Maze Size : %d", int(m_app->config().miniMapSize*100.0f / App::SCREEN_WIDTH)), x,y, h ,WHITE);
+    DrawText(FormatText("2D Maze Size : %d", int(m_app->config().miniMapSize*100.0f / App::SCREEN_WIDTH)), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("Flip 2D Maze : %s", strs2[m_app->config().rotate2DMaze ? 1:0]), x,y, h ,WHITE);
+    DrawText(FormatText("Flip 2D Maze : %s", strs2[m_app->config().rotate2DMaze ? 1:0]), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
+    y+=h;
+
+     h=m_select == s++ ? height*2 : height;
+    DrawRectangle( 0, y, App::SCREEN_WIDTH, h, h!= height ? SKYBLUE : LIGHTGRAY);
+    DrawText("Start", App::SCREEN_WIDTH / 2 - h*1.25 ,y,h ,WHITE);
+    y+=h;
+
 }

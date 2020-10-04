@@ -1,0 +1,194 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "raylib/src/external/glfw/src/libglfw3.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include_directories",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"raylib/src/external/glfw/src/CMakeLists.txt",
+			"raylib/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 13,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 120,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "glfw_objlib::@c35f4a4d62f6cffb7150"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "GLFW3"
+	},
+	"id" : "glfw::@c35f4a4d62f6cffb7150",
+	"name" : "glfw",
+	"nameOnDisk" : "libglfw3.a",
+	"paths" : 
+	{
+		"build" : "raylib/src/external/glfw/src",
+		"source" : "raylib/src/external/glfw/src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/context.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/init.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/input.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/monitor.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/vulkan.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/window.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/x11_init.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/x11_monitor.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/x11_window.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/xkb_unicode.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/posix_time.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/posix_thread.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/glx_context.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/egl_context.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/osmesa_context.c.o",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/linux_joystick.c.o",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
