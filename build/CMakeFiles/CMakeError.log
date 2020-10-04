@@ -1,0 +1,32 @@
+The C compiler identification could not be found in "/home/krsn53/programming/c/raylib/win-3d-maze/build/CMakeFiles/3.16.3/CompilerIdC/a.out.js"
+
+The CXX compiler identification could not be found in "/home/krsn53/programming/c/raylib/win-3d-maze/build/CMakeFiles/3.16.3/CompilerIdCXX/a.out.js"
+
+Determining if the QueryPerformanceCounter exist failed with the following output:
+Change Dir: /home/krsn53/programming/c/raylib/win-3d-maze/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_e3637 && [1/2] Building C object CMakeFiles/cmTC_e3637.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_e3637.dir/CheckSymbolExists.c.o 
+/home/krsn53/programs/emsdk/upstream/emscripten/emcc -D_POSIX_C_SOURCE=199309L  -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith -o CMakeFiles/cmTC_e3637.dir/CheckSymbolExists.c.o   -c CheckSymbolExists.c
+CheckSymbolExists.c:2:10: fatal error: 'windows.h' file not found
+#include <windows.h>
+         ^~~~~~~~~~~
+1 error generated.
+emcc: error: '/home/krsn53/programs/emsdk/upstream/bin/clang -target wasm32-unknown-emscripten -D__EMSCRIPTEN_major__=2 -D__EMSCRIPTEN_minor__=0 -D__EMSCRIPTEN_tiny__=3 -D_LIBCPP_ABI_VERSION=2 -Dunix -D__unix -D__unix__ -Werror=implicit-function-declaration -Xclang -nostdsysteminc -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/include/compat -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/include -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/include/libc -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/lib/libc/musl/arch/emscripten -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/local/include -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/include/SSE -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/include/neon -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/lib/compiler-rt/include -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/lib/libunwind/include -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/cache/wasm/include -DEMSCRIPTEN -fignore-exceptions -D_POSIX_C_SOURCE=199309L -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith -o CMakeFiles/cmTC_e3637.dir/CheckSymbolExists.c.o -c CheckSymbolExists.c -Xclang -isystem/home/krsn53/programs/emsdk/upstream/emscripten/system/include/SDL -c -o CMakeFiles/cmTC_e3637.dir/CheckSymbolExists.c.o -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr' failed (1)
+ninja: build stopped: subcommand failed.
+
+
+File /home/krsn53/programming/c/raylib/win-3d-maze/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef QueryPerformanceCounter
+  return ((int*)(&QueryPerformanceCounter))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
