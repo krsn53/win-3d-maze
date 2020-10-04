@@ -696,15 +696,15 @@ void Maze::draw(){
                 DrawModelEx(m_icosa, Vector3{i.pos.x, -0.25f, i.pos.y}, Vector3{0.5f, 1.0f, 0.5f}, i.angle, Vector3{0.4f, 0.4f, 0.4f}, WHITE );
             }
         }
-
+        BeginBlendMode(BLEND_ALPHA);
         BeginShaderMode(m_alphaclip);
 
         for(auto& i: m_rats){
             DrawBillboardRec(m_camera, m_atlas, Rectangle{0.0f, 384.0f, 256.0f, 128.0f}, Vector3{i.pos.x , -0.35f, i.pos.y}, 0.5f, WHITE);
         }
 
-
         rlPushMatrix();
+
         rlScalef(1.0f, WIDTH, 1.0f);
         glDepthMask(false);
             for(auto& i: m_gls){
@@ -724,6 +724,7 @@ void Maze::draw(){
         rlPopMatrix();
 
         EndShaderMode();
+        EndBlendMode();
     rlPopMatrix();
     EndMode3D();
 
