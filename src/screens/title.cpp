@@ -42,12 +42,12 @@ void Title::setSelect(int s){
     }
     case 5:
     {
-        m_tmp = (int)(100.0f / m_app->config().hedronRate);
+        m_tmp =m_app->config().hedronRate;
         break;
     }
     case 6:
     {
-        m_tmp = (int)(100.0f / m_app->config().glRate);
+        m_tmp = m_app->config().glRate;
         break;
     }
     case 7:
@@ -155,7 +155,7 @@ Screen* Title::update(){
     case 3:
     {
         m_app->config().ratsNum =  m_tmp;
-        m_app->config().ratsNum = std::min(m_app->config().mapSize*m_app->config().mapSize / 5 + 1, std::max(0, m_app->config().ratsNum));
+        m_app->config().ratsNum = std::min(m_app->config().mapSize*m_app->config().mapSize / 4 + 1, std::max(0, m_app->config().ratsNum));
         break;
     }
     case 4:
@@ -166,14 +166,14 @@ Screen* Title::update(){
     }
     case 5:
     {
-        m_app->config().hedronRate =  100.0f / (std::max(1.0f,  m_tmp));
-        m_app->config().hedronRate = std::min(100, std::max(4, m_app->config().hedronRate));
+        m_app->config().hedronRate =   m_tmp;
+        m_app->config().hedronRate = std::min(25, std::max(0, m_app->config().hedronRate));
         break;
     }
     case 6:
     {
-        m_app->config().glRate =  100.0f / (std::max(1.0f,  m_tmp));
-        m_app->config().glRate = std::min(100, std::max(4, m_app->config().glRate));
+        m_app->config().glRate = m_tmp;
+        m_app->config().glRate = std::min(25, std::max(0, m_app->config().glRate));
         break;
     }
     case 7:
@@ -246,12 +246,12 @@ void Title::draw(){
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("Hedron Freq : %.0f %%", (100.0f / m_app->config().hedronRate)), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
+    DrawText(FormatText("Hedron Freq : %d %%", m_app->config().hedronRate), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
     drawMarker(s,y,h);
 
     h=m_select == s++ ? height*2 : height;
-    DrawText(FormatText("OpenGL Freq : %.0f %%", (100.0f / m_app->config().glRate)), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
+    DrawText(FormatText("OpenGL Freq : %d %%", m_app->config().glRate), height != h ? x+App::SCREEN_WIDTH/4 : x,y,height ,WHITE);
     y+=h;
 
     const char* strs2[]= {"Off", "On"};

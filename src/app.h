@@ -46,6 +46,7 @@ public:
 
     inline Config& config()  { return m_config; }
 
+    void draw_cursor();
 private:
     Screen *m_screen;
     Config m_config;

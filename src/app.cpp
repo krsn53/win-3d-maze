@@ -18,8 +18,8 @@ App::App() :
     m_config.miniMapSize= App::SCREEN_WIDTH/15;
     m_config.show2DMaze = false;
     m_config.rotate2DMaze= false;
-    m_config.hedronRate = 50;
-    m_config.glRate = 100;
+    m_config.hedronRate = 5;
+    m_config.glRate = 5;
 }
 
 
@@ -39,6 +39,7 @@ void App::update()
         m_screen->draw();
 
         DrawFPS(10, 10);
+        draw_cursor();
     EndDrawing();
     //----------------------------------------------------------------------------------
 }
@@ -53,6 +54,7 @@ int App::run(int argc, char** argv){
     // Initialization (Note windowTitle is unused on Android)
     //---------------------------------------------------------
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Maze3D");
+    HideCursor();
 
     m_screen = new Title();
     m_screen->initialize(this);
@@ -78,3 +80,18 @@ int App::run(int argc, char** argv){
     return 0;
 }
 
+void App::draw_cursor(){
+    if(!IsCursorOnScreen()) return ;
+
+    const Vector2 mouse = GetMousePosition();
+
+    const float width = 40;
+    const float width_s = width*0.7071;
+    Vector2 p1 = mouse;
+    Vector2 p2 = {mouse.x, mouse.y + width};
+    Vector2 p3 = {mouse.x + width*0.3827f*0.75f, mouse.y + width*0.9238f*0.75f};
+    Vector2 p4 = {mouse.x + width_s, mouse.y + width_s};
+
+    DrawTriangle(p1, p2, p3, BROWN);
+    DrawTriangle(p1, p3, p4, RAYWHITE);
+}

@@ -107,7 +107,7 @@ void Maze::start(){
     m_wall = LoadModelFromMesh( genMeshWall(m_atlas, m_map, Rectangle{0, 0, 128,128}, Rectangle{0.0f, 128.0f, 256.0f, 256.0f}));
     m_wall.materials[0].maps[MAP_DIFFUSE].texture = m_atlas;
 
-    int n = random() % ((X*Z+m_app->config().glRate - 2)/ m_app->config().glRate) + 1;
+    int n = random() % ((X*Z - 2) * m_app->config().glRate / 100) + 1;
     m_gls.reserve(n);
     for(int i=0; i< n; i++) {
 
@@ -122,7 +122,7 @@ void Maze::start(){
         m_gls.emplace_back(Vector2{xp, zp});
     }
 
-    n = (X*Z - 2)/ m_app->config().hedronRate + 1;
+    n = (X*Z - 2)* m_app->config().hedronRate / 100 + 1;
     m_hedrons.reserve(n);
     for(int i=0; i< n; i++) {
         do {
@@ -921,8 +921,6 @@ void Maze::draw(){
 
 
     }
-
-
 }
 
 
