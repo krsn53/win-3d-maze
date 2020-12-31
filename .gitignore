@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 .user
 raylib/
+=======
+*.user
+>>>>>>> fd2006fd745d3a46de95f53ebf34e0fa3a5b3a5e
 build/
